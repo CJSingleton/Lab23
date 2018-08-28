@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<br />
+<h4><a href="/Home/NewUser">New Users Register Here</a></h4>
+<br/>
+<h4><a href="/Home/Admin">Admin Users Login Here</a></h4>
+
+<br/>
+<h5>Current Users:</h5>
+<br />
+
+<table border="1" class="table">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+    </tr>
+    @foreach (var user in ViewBag.Users)
+    {
+        <tr>
+            <td>@user.fname</td>
+            <td>@user.lname</td>
+            <td>@user.email</td>
+        </tr>
+    }
+</table>

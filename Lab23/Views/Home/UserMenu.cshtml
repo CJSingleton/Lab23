@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "UserMenu";
+}
+
+<h2>Menu:</h2>
+<br/>
+<table border="1" class="table">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var item in ViewBag.Items)
+    {
+        <tr>
+            <td>@item.name</td>
+            <td>@item.description</td>
+            <td>@item.quantity</td>
+            <td>@item.price</td>
+        </tr>
+    }
+</table>
+
+<h4><a href="/Home/Index">Return to Start</a></h4>
